@@ -14,29 +14,56 @@ flowchart LR
     %% RELATIONSHIPS
     %% =========================
 
-    R_CATEGORY_PRODUCT{BELONGS_TO}
+    R_CATEGORY_PRODUCT{HAS}
     R_CUSTOMER_INVOICE{MAKES}
     R_EMPLOYEE_INVOICE{CREATES}
     R_INVOICE_PRODUCT{CONTAINS}
 
     %% =========================
-    %% ENTITY ATTRIBUTES
+    %% CATEGORY ATTRIBUTES
     %% =========================
 
     category_id([<u>category_id</u>])
     category_name([category_name])
     category_description([description])
 
+    CATEGORY --- category_id
+    CATEGORY --- category_name
+    CATEGORY --- category_description
+
+    %% =========================
+    %% PRODUCT ATTRIBUTES
+    %% =========================
+
     product_id([<u>product_id</u>])
     product_name([product_name])
     product_unit_price([unit_price])
     product_stock_quantity([stock_quantity])
+
+    PRODUCT --- product_id
+    PRODUCT --- product_name
+    PRODUCT --- product_unit_price
+    PRODUCT --- product_stock_quantity
+
+    %% =========================
+    %% CUSTOMER ATTRIBUTES
+    %% =========================
 
     customer_id([<u>customer_id</u>])
     customer_full_name([full_name])
     customer_phone([phone])
     customer_email([email])
     customer_address([address])
+
+    CUSTOMER --- customer_id
+    CUSTOMER --- customer_full_name
+    CUSTOMER --- customer_phone
+    CUSTOMER --- customer_email
+    CUSTOMER --- customer_address
+
+    %% =========================
+    %% EMPLOYEE ATTRIBUTES
+    %% =========================
 
     employee_id([<u>employee_id</u>])
     employee_full_name([full_name])
@@ -45,37 +72,6 @@ flowchart LR
     employee_email([email])
     employee_hire_date([hire_date])
 
-    invoice_id([<u>invoice_id</u>])
-    invoice_datetime([invoice_datetime])
-    invoice_payment_method([payment_method])
-
-    %% =========================
-    %% RELATIONSHIP ATTRIBUTES
-    %% These become INVOICE_DETAIL table later
-    %% =========================
-
-    detail_quantity([quantity])
-    detail_unit_price([unit_price])
-
-    %% =========================
-    %% ATTRIBUTE CONNECTIONS
-    %% =========================
-
-    CATEGORY --- category_id
-    CATEGORY --- category_name
-    CATEGORY --- category_description
-
-    PRODUCT --- product_id
-    PRODUCT --- product_name
-    PRODUCT --- product_unit_price
-    PRODUCT --- product_stock_quantity
-
-    CUSTOMER --- customer_id
-    CUSTOMER --- customer_full_name
-    CUSTOMER --- customer_phone
-    CUSTOMER --- customer_email
-    CUSTOMER --- customer_address
-
     EMPLOYEE --- employee_id
     EMPLOYEE --- employee_full_name
     EMPLOYEE --- employee_position
@@ -83,25 +79,41 @@ flowchart LR
     EMPLOYEE --- employee_email
     EMPLOYEE --- employee_hire_date
 
+    %% =========================
+    %% INVOICE ATTRIBUTES
+    %% =========================
+
+    invoice_id([<u>invoice_id</u>])
+    invoice_datetime([invoice_datetime])
+    invoice_payment_method([payment_method])
+
     INVOICE --- invoice_id
     INVOICE --- invoice_datetime
     INVOICE --- invoice_payment_method
+
+    %% =========================
+    %% RELATIONSHIP ATTRIBUTES
+    %% CONTAINS becomes INVOICE_DETAIL later
+    %% =========================
+
+    detail_quantity([quantity])
+    detail_unit_price([unit_price])
 
     R_INVOICE_PRODUCT --- detail_quantity
     R_INVOICE_PRODUCT --- detail_unit_price
 
     %% =========================
-    %% RELATIONSHIP CONNECTIONS
+    %% CORRECTED RELATIONSHIP CARDINALITIES
     %% =========================
 
-    CATEGORY ---|"0..N"| R_CATEGORY_PRODUCT
-    R_CATEGORY_PRODUCT ---|"1"| PRODUCT
+    CATEGORY ---|"1"| R_CATEGORY_PRODUCT
+    R_CATEGORY_PRODUCT ---|"0..N"| PRODUCT
 
-    CUSTOMER ---|"0..N"| R_CUSTOMER_INVOICE
-    R_CUSTOMER_INVOICE ---|"0..1"| INVOICE
+    CUSTOMER ---|"0..1"| R_CUSTOMER_INVOICE
+    R_CUSTOMER_INVOICE ---|"0..N"| INVOICE
 
-    EMPLOYEE ---|"0..N"| R_EMPLOYEE_INVOICE
-    R_EMPLOYEE_INVOICE ---|"1"| INVOICE
+    EMPLOYEE ---|"1"| R_EMPLOYEE_INVOICE
+    R_EMPLOYEE_INVOICE ---|"0..N"| INVOICE
 
-    INVOICE ---|"1..N"| R_INVOICE_PRODUCT
-    R_INVOICE_PRODUCT ---|"0..N"| PRODUCT
+    INVOICE ---|"0..N"| R_INVOICE_PRODUCT
+    R_INVOICE_PRODUCT ---|"1..N"| PRODUCT
