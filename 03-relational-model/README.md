@@ -2,9 +2,11 @@
 
 ## Purpose
 
-This folder converts the Chen ERD into a relational database model. Each strong entity becomes a table, and relationships are implemented with primary keys, foreign keys, and one associative table.
+This folder converts the Chen ERD into a relational database model.
 
 The diagram for this model is stored in [`uml.mmd`](uml.mmd).
+
+The script to create the database is stored in [`create_database.sql`](create_database.sql)
 
 ## 1. Relational Schema Overview
 

@@ -11,13 +11,13 @@ Mini Mart Sales Management System is a DBI202 assignment project about designing
 > | 0 | Choose a topic and state the reason for choosing it | Completed |
 > | 1 | Define requirements of the topic | Completed |
 > | 2 | Draw ERD based on requirements | Completed |
-> | 3 | Convert ERD to relational database model | In progress |
+> | 3 | Convert ERD to relational database model | Completed |
 > | 4 | Insert data and illustrate required queries | Not completed |
 > | 5 | Create 1 stored procedure | Not completed |
 > | 6 | Create 1 function | Not completed |
 > | 7 | Create 1 trigger | Not completed |
 >
-> Next step to do: finish Step 3 by adding the relational schema SQL, then continue with sample data and query demos for Step 4.
+> Next step to do: Insert sample data and write query demos for Step 4.
 
 ## Repository Structure
 
