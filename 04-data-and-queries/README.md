@@ -1,27 +1,19 @@
-# 04 - Sample Data and Query Demo
+# Dữ liệu mẫu và câu truy vấn demo
 
-## Purpose
+## 1. Mục đích
 
-This folder contains sample data and SQL query demonstrations for the database created in Step 3.
+Thư mục này dùng để lưu dữ liệu mẫu và các câu truy vấn SQL minh họa cho database của hệ thống Mini Mart Sales Management System.
 
-## Files
+Người thực hiện phần này cần tạo dữ liệu đủ hợp lý để chứng minh database hoạt động đúng, sau đó viết các câu truy vấn đáp ứng yêu cầu của bài như lọc dữ liệu, nối bảng, gom nhóm, sắp xếp, truy vấn con và tìm kiếm theo mẫu.
 
-| File | Description |
-| --- | --- |
-| `seed-data.sql` | Inserts sample categories, suppliers, products, customers, employees, invoices, invoice details, and payments. |
-| `report-queries.sql` | Demonstrates useful SQL queries using SELECT, WHERE, GROUP BY, ORDER BY, JOIN, HAVING, subquery, and LIKE. |
+## 5. README cần hoàn thiện những gì
 
-## Query Requirements Covered
+Sau khi viết SQL, người thực hiện cần cập nhật README này thành tài liệu mô tả phần đã làm:
 
-- `SELECT`
-- `WHERE`
-- `GROUP BY`
-- `ORDER BY`
-- `JOIN`
-- `HAVING`
-- Subquery
-- `LIKE`
-
-## Note
-
-Run `07-triggers/create-trigger.sql` before `seed-data.sql` if you want the stock quantities and invoice totals to update automatically when invoice details are inserted.
+| Mục cần ghi | Nội dung cần mô tả |
+| ----------- | ------------------ |
+| Danh sách file SQL | Tên file, mục đích của từng file, thứ tự chạy file. |
+| Mô tả dữ liệu mẫu | Số lượng record đã thêm cho từng bảng và ý nghĩa dữ liệu. |
+| Danh sách câu truy vấn | Mỗi truy vấn dùng để giải quyết yêu cầu nào. |
+| Kết quả mong đợi | Ghi ngắn gọn truy vấn sẽ trả về thông tin gì. |
+| Ghi chú khi chạy | Điều kiện cần có trước khi chạy, ví dụ đã tạo schema ở bước 03. |
