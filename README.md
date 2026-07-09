@@ -6,16 +6,16 @@ Mini Mart Sales Management System is a DBI202 assignment project about designing
 >
 > Assignment step tracker:
 >
-> | Step | Task | Status |
+> | Step | Task | Implementer |
 > | --- | --- | --- |
-> | 0 | Choose a topic and state the reason for choosing it | Completed |
-> | 1 | Define requirements of the topic | Completed |
-> | 2 | Draw ERD based on requirements | Completed |
-> | 3 | Convert ERD to relational database model | Completed |
-> | 4 | Insert data and illustrate required queries | Not completed |
-> | 5 | Create 1 stored procedure | Not completed |
-> | 6 | Create 1 function | Not completed |
-> | 7 | Create 1 trigger | Not completed |
+> | 0 | Choose a topic and state the reason for choosing it | Nguyen Sy Nguyen |
+> | 1 | Define requirements of the topic | Nguyen Sy Nguyen |
+> | 2 | Draw ERD based on requirements | Nguyen Sy Nguyen, Nguyen Duy Khanh, Nguyen Bao Toan |
+> | 3 | Convert ERD to relational database model | Nguyen Sy Nguyen |
+> | 4 | Insert data and illustrate required queries | Nguyen Khoa Diem |
+> | 5 | Create 1 stored procedure | Bui Chi Bao |
+> | 6 | Create 1 function | Nguyen Bao Toan |
+> | 7 | Create 1 trigger | Nguyen Duy Khanh |
 >
 > The script to create the database is stored in [`create_database.sql`](/03-relational-model/create_database.sql)
 
@@ -27,7 +27,7 @@ Mini Mart Sales Management System is a DBI202 assignment project about designing
 | `01-requirements/` | Lists business requirements, external entities, and system scope. |
 | `02-erd/` | Contains the ERD explanation and Mermaid ER diagram source. |
 | `03-relational-model/` | Converts the ERD into relational tables and provides the database schema SQL. |
-| `04-data-and-queries/` | Provides sample data and __demo__ queries using SELECT, WHERE, GROUP BY, ORDER BY, JOIN, HAVING, subquery, and LIKE. |
+| `04-data-and-queries/` | Provides sample data and __demo__ queries. |
 | `05-stored-procedures/` | Contains one stored procedure __demo__. |
 | `06-functions/` | Contains one SQL function __demo__. |
-| `07-triggers/` | Contains one trigger __demo__ for stock and invoice total updates. |
+| `07-triggers/` | Contains one trigger __demo__. |
